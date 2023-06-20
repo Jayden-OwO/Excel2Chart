@@ -21,8 +21,12 @@ const CountryProduct: React.FC<Props> = ({ data }) => {
     //   data: ["邮件数", "累计邮件数"],
     // },
     grid: {
-      height: "70%",
+      height: "80%",
+      // width: "90%",
       top: "10%",
+      containLabel: true,
+      left: "auto",
+      right: "auto",
       // bottom:""
     },
 
@@ -31,8 +35,8 @@ const CountryProduct: React.FC<Props> = ({ data }) => {
       max: 10,
       calculable: true,
       orient: "vertical",
-      left: "1%",
-      bottom: "10%",
+      right: "1%",
+      bottom: "30%",
     },
     dataZoom: [
       {
@@ -77,8 +81,6 @@ const CountryProduct: React.FC<Props> = ({ data }) => {
           allData.push(list);
         });
       });
-      // allData.map((item: any) => [item[1], item[0], item[2] || "-"]);
-      console.log("====", allData);
       optionInfo.xAxis = {
         type: "category",
         data: country,

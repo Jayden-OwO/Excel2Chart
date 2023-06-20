@@ -81,7 +81,6 @@ const Email: React.FC<Props> = ({ data }) => {
             : data.filter((res: any) => res["日期"] === item).length
         );
       });
-      console.log(emailCount);
       optionInfo.xAxis = {
         ...optionInfo.xAxis,
         data: date,
@@ -91,7 +90,7 @@ const Email: React.FC<Props> = ({ data }) => {
           name: "邮件数",
           type: "line",
           data: emailCount,
-          stack: "Total",
+          // stack: "Total",
           itemStyle: {
             normal: {
               label: {
@@ -110,7 +109,7 @@ const Email: React.FC<Props> = ({ data }) => {
           name: "累计邮件数",
           type: "line",
           data: allEmailCount,
-          stack: "Total",
+          // stack: "Total",
           itemStyle: {
             normal: {
               label: {
