@@ -10,7 +10,7 @@ export async function getRoutes() {
     routeComponents: {
 '1': React.lazy(() => import(/* webpackChunkName: "p__index" */'@/pages/index.tsx')),
 '2': React.lazy(() => import(/* webpackChunkName: "p__docs" */'@/pages/docs.tsx')),
-'@@/global-layout': React.lazy(() => import(/* webpackChunkName: "layouts__index" */'/Volumes/Workspace/NBT/excel2chart/src/layouts/index.tsx')),
+'@@/global-layout': React.lazy(() => import(/* webpackChunkName: "layouts__index" */'/Volumes/Workspace/Excel2Chart/src/layouts/index.tsx')),
 },
   };
 }

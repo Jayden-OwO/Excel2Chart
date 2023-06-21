@@ -14,9 +14,9 @@ const CountryProduct: React.FC<Props> = ({ data }) => {
       text: "各个国家产品趋势",
     },
     width: "95%",
-    tooltip: {
-      trigger: "axis",
-    },
+    // tooltip: {
+    //   trigger: "axis",
+    // },
     // legend: {
     //   data: ["邮件数", "累计邮件数"],
     // },

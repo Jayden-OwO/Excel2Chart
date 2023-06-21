@@ -27,7 +27,7 @@
         "src/.umi/*"
       ],
       "umi": [
-        "/Volumes/Workspace/NBT/excel2chart/node_modules/umi"
+        "/Volumes/Workspace/Excel2Chart/node_modules/umi"
       ],
       "umi/typings": [
         "src/.umi/typings"
