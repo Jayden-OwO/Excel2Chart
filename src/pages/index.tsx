@@ -21,7 +21,7 @@ export default function HomePage() {
   };
 
   return (
-    <div>
+    <div style={{ padding: 40 }}>
       <Row gutter={[24, 24]}>
         <Col span={24}>
           <Upload customRequest={customUpload} fileList={[]}>

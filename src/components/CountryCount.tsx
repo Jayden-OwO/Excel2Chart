@@ -14,6 +14,7 @@ const CountryCount: React.FC<Props> = ({ data }) => {
     },
     width: "100%",
     height: 700,
+    // padding: [0, 100, 0, 0],
     tooltip: {
       trigger: "item",
     },
@@ -22,8 +23,10 @@ const CountryCount: React.FC<Props> = ({ data }) => {
       left: "0",
       orient: "vertical",
       top: "center",
-      height: "70%",
+      height: "90%",
       itemGap: 5,
+      padding: [0, 30, 0, 0],
+      // type: "scroll",
       // itemWidth: 15,
     },
     series: [
@@ -35,11 +38,6 @@ const CountryCount: React.FC<Props> = ({ data }) => {
         radius: "50%",
         // center: ["50%", "50%"], //左右，上下
         avoidLabelOverlap: true,
-        // itemStyle: {
-        //   borderRadius: 10,
-        //   borderColor: "#fff",
-        //   borderWidth: 2,
-        // },
         label: {
           formatter: "{b} {d}%\n{c_set|{c}}",
           position: "outside",

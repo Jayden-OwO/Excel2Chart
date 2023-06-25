@@ -14,9 +14,9 @@ const CountryProduct: React.FC<Props> = ({ data }) => {
       text: "各个国家产品趋势",
     },
     width: "95%",
-    // tooltip: {
-    //   trigger: "axis",
-    // },
+    tooltip: {
+      position: "top",
+    },
     // legend: {
     //   data: ["邮件数", "累计邮件数"],
     // },
@@ -101,6 +101,7 @@ const CountryProduct: React.FC<Props> = ({ data }) => {
       };
       optionInfo.series = [
         {
+          name: "国家产品趋势",
           // name: "1",
           type: "heatmap",
           data: allData,
