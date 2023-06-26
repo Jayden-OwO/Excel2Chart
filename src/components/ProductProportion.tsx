@@ -1,6 +1,6 @@
 // import { importXlsx } from "utils/excel2json";
 import Chart, { EChartsOption } from "@/components/Chart";
-import { getFormatDate_XLSX } from "@/utils/tools";
+import { compare, getFormatDate_XLSX } from "@/utils/tools";
 import { useEffect, useState } from "react";
 
 interface Props {
@@ -115,8 +115,8 @@ const ProductProportion: React.FC<Props> = ({ data }) => {
           value: data.filter((res: any) => res["产品"] === item).length,
         });
       });
-      console.log(handleProductCount);
-      optionInfo.series[0].data = handleProductCount;
+      const newInfo = handleProductCount.sort(compare("value"));
+      optionInfo.series[0].data = newInfo;
       setOption(optionInfo);
     }
   }, [data]);

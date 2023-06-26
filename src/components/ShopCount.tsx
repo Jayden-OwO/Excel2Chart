@@ -1,5 +1,6 @@
 // import { importXlsx } from "utils/excel2json";
 import Chart, { EChartsOption } from "@/components/Chart";
+import { compare } from "@/utils/tools";
 import { useEffect, useState } from "react";
 
 interface Props {
@@ -86,7 +87,8 @@ const ShopCount: React.FC<Props> = ({ data }) => {
           value: data.filter((res: any) => res["店铺"] === item).length,
         });
       });
-      optionInfo.series[0].data = handleShopCount;
+      const newInfo = handleShopCount.sort(compare("value"));
+      optionInfo.series[0].data = newInfo;
       setOption(optionInfo);
     }
   }, [data]);

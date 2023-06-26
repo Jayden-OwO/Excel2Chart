@@ -1,6 +1,6 @@
 // import { importXlsx } from "utils/excel2json";
 import Chart, { EChartsOption } from "@/components/Chart";
-import { getFormatDate_XLSX } from "@/utils/tools";
+import { compare, getFormatDate_XLSX } from "@/utils/tools";
 import { useEffect, useState } from "react";
 
 interface Props {
@@ -85,7 +85,8 @@ const CountryCount: React.FC<Props> = ({ data }) => {
           value: data.filter((res: any) => res["国家"] === item).length,
         });
       });
-      optionInfo.series[0].data = handleCountryCount;
+      const newInfo = handleCountryCount.sort(compare("value"));
+      optionInfo.series[0].data = newInfo;
       setOption(optionInfo);
     }
   }, [data]);

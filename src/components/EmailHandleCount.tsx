@@ -1,6 +1,6 @@
 // import { importXlsx } from "utils/excel2json";
 import Chart, { EChartsOption } from "@/components/Chart";
-import { getFormatDate_XLSX } from "@/utils/tools";
+import { compare, getFormatDate_XLSX } from "@/utils/tools";
 import { useEffect, useState } from "react";
 
 interface Props {
@@ -116,8 +116,8 @@ const EmailHandleCount: React.FC<Props> = ({ data }) => {
           value: data.filter((res: any) => res["负责人"] === item).length,
         });
       });
-      console.log(handleEmailCount);
-      optionInfo.series[0].data = handleEmailCount;
+      const newInfo = handleEmailCount.sort(compare("value"));
+      optionInfo.series[0].data = newInfo;
       setOption(optionInfo);
     }
   }, [data]);
