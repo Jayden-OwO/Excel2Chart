@@ -19,18 +19,18 @@ const SaleManProduct: React.FC<Props> = ({ data }) => {
       bottom: "10%",
       containLabel: true,
     },
-    dataZoom: [
-      {
-        type: "inside",
-        start: 30,
-        end: 100,
-      },
-      {
-        // type: "inside",
-        start: 30,
-        end: 100,
-      },
-    ],
+    // dataZoom: [
+    //   {
+    //     type: "inside",
+    //     start: 30,
+    //     end: 100,
+    //   },
+    //   {
+    //     // type: "inside",
+    //     start: 30,
+    //     end: 100,
+    //   },
+    // ],
     // xAxis: {
     //   type: "category",
     //   splitLine: {

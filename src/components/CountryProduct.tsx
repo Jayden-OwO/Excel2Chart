@@ -21,7 +21,7 @@ const CountryProduct: React.FC<Props> = ({ data }) => {
     //   data: ["邮件数", "累计邮件数"],
     // },
     grid: {
-      height: "80%",
+      height: "90%",
       // width: "90%",
       top: "10%",
       containLabel: true,
@@ -38,18 +38,18 @@ const CountryProduct: React.FC<Props> = ({ data }) => {
       right: "1%",
       bottom: "30%",
     },
-    dataZoom: [
-      {
-        type: "inside",
-        start: 30,
-        end: 100,
-      },
-      {
-        // type: "inside",
-        start: 30,
-        end: 100,
-      },
-    ],
+    // dataZoom: [
+    //   {
+    //     type: "inside",
+    //     start: 30,
+    //     end: 100,
+    //   },
+    //   {
+    //     // type: "inside",
+    //     start: 30,
+    //     end: 100,
+    //   },
+    // ],
   });
 
   useEffect(() => {
