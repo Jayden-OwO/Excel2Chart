@@ -4,12 +4,13 @@
 import React from 'react';
 
 export async function getRoutes() {
-  const routes = {"1":{"path":"/","parentId":"@@/global-layout","id":"1"},"2":{"path":"/docs","parentId":"@@/global-layout","id":"2"},"@@/global-layout":{"id":"@@/global-layout","path":"/","isLayout":true}} as const;
+  const routes = {"1":{"path":"/","parentId":"@@/global-layout","id":"1"},"2":{"path":"/docs","parentId":"@@/global-layout","id":"2"},"3":{"path":"/pk","parentId":"@@/global-layout","id":"3"},"@@/global-layout":{"id":"@@/global-layout","path":"/","isLayout":true}} as const;
   return {
     routes,
     routeComponents: {
 '1': React.lazy(() => import(/* webpackChunkName: "p__index" */'@/pages/index.tsx')),
 '2': React.lazy(() => import(/* webpackChunkName: "p__docs" */'@/pages/docs.tsx')),
+'3': React.lazy(() => import(/* webpackChunkName: "p__pk" */'@/pages/pk.tsx')),
 '@@/global-layout': React.lazy(() => import(/* webpackChunkName: "layouts__index" */'/Volumes/Workspace/Excel2Chart/src/layouts/index.tsx')),
 },
   };

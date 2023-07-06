@@ -87,7 +87,7 @@ const Supervisor: React.FC = ({}) => {
                 let amount = data.filter(
                   (item: any) => item["姓名"] === info.name
                 )[0]["金额"];
-                return amount ? `${info.data} (${amount || 0}万)` : info.data;
+                return amount ? `${info.data} (${amount || 0}$)` : info.data;
                 // return data.filter((item:any)=> item["姓名"] === res)
               }
               // var res =  "{xing|} " + param.name
