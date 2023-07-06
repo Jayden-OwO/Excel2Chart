@@ -5,6 +5,7 @@ export default defineConfig({
   routes: [
     { path: "/", component: "index" },
     { path: "/docs", component: "docs" },
+    { path: "/pk", component: "pk" },
   ],
   npmClient: "yarn",
   // request: {
